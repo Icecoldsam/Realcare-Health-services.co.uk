@@ -1,0 +1,736 @@
+/* General Styles */
+/* Small devices (smartphones, portrait 600px and below) */
+@media only screen and (max-width: 600px) {
+    .header, .content, .footer {
+        padding: 10px;
+        flex-direction: column;
+    }
+    .contact-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Tablets (portrait 768px and below) */
+@media only screen and (max-width: 768px) {
+    .header, .content, .footer {
+        padding: 15px;
+    }
+
+    .contact-button {
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* Laptops and larger screens */
+@media only screen and (min-width: 1024px) {
+    .header, .content, .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+* {
+    margin: 0;
+    /* padding: 0; */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffff00;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* General Navigation Link Style */
+nav ul li a,
+.about-button {
+    background-color: #db4545; /* Background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding to make it look like a button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    font-weight: bold; /* Bold font */
+    text-transform: uppercase; /* Make text uppercase */
+    border: none; /* Remove border for button */
+    cursor: pointer; /* Change cursor to pointer */
+}
+/* General styles for navigation links */
+
+/* General styles for header */
+.sticky-header {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out logo and nav */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add padding */
+    background-color: #fff; /* Background color */
+}
+
+/* Logo styles */
+.logo img {
+    max-width: 100px; /* Set max width for logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hamburger icon styles */
+#hamburger {
+    font-size: 30px; /* Size of the hamburger icon */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* General styles for header */
+.sticky-header {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space out logo and nav */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Add padding */
+    background-color: #fff; /* Background color */
+}
+
+/* Hamburger icon styles */
+#hamburger {
+    font-size: 30px; /* Size of the hamburger icon */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Initially hide the hamburger menu */
+#hamburger {
+    display: none; /* Hide hamburger by default */
+   position: relative; /* Make sure it's positioned */
+z-index: 10; /* Ensure it appears above other elements */
+}
+
+/* Navigation styles */
+nav {
+    position: relative; /* Relative position for dropdown */
+}
+
+/* Styles for the navigation links */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: none; /* Initially hide links */
+    position: absolute; /* Position absolute for dropdown */
+    top: 50px; /* Position below the header */
+    right: 0; /* Align to the right */
+    background-color: white; /* Background color for the dropdown */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Show links when nav is active */
+nav.active ul {
+    display: flex; /* Show links */
+    flex-direction: column; /* Stack links vertically */
+}
+
+/* Media Query for Mobile Styles */
+@media (max-width: 768px) {
+    /* Show hamburger menu on mobile */
+    #hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    /* Ensure links are hidden initially on mobile */
+    nav ul {
+        display: none; /* Hide links */
+    }
+}
+
+@media (min-width: 769px) {
+    /* Show links in a row on larger screens */
+    nav ul {
+        display: flex; /* Show links */
+        position: static; /* Remove absolute positioning */
+        background-color: transparent; /* Background transparent for desktop */
+        box-shadow: none; /* Remove shadow for desktop */
+    }
+
+    /* Hide hamburger menu on larger screens */
+    #hamburger {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
+
+/* Navigation styles */
+nav {
+    position: relative; /* Relative position for dropdown */
+}
+
+/* Styles for the navigation links */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: none; /* Initially hide links */
+    position: absolute; /* Position absolute for dropdown */
+    top: 50px; /* Position below the header */
+    right: 0; /* Align to the right */
+    background-color: white; /* Background color for the dropdown */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Show links when nav is active */
+nav.active ul {
+    display: flex; /* Show links */
+    flex-direction: column; /* Stack links vertically */
+}
+
+/* Media Query for Mobile Styles */
+@media (max-width: 768px) {
+    /* Show hamburger menu on mobile */
+    #hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    /* Ensure links are hidden initially on mobile */
+    nav ul {
+        display: none; /* Hide links */
+    }
+}
+
+@media (min-width: 769px) {
+    /* Show links in a row on larger screens */
+    nav ul {
+        display: flex; /* Show links */
+        position: static; /* Remove absolute positioning */
+        background-color: transparent; /* Background transparent for desktop */
+        box-shadow: none; /* Remove shadow for desktop */
+    }
+
+    /* Hide hamburger menu on larger screens */
+    #hamburger {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
+
+/* About Us Button styled as a link */
+.about-button {
+    background: none; /* Remove background */
+    color: #007bff; /* Same color as links */
+    border: none; /* Remove border */
+    text-decoration: underline; /* Underline to resemble a link */
+    font-size: 16px; /* Match font size of links */
+    cursor: pointer; /* Pointer cursor */
+    padding: 0; /* Remove padding */
+}
+
+/* Hover effect for button */
+.about-button:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #0056b3; /* Darker shade on hover */
+}
+
+
+/* Hover Effect */
+nav ul li a:hover,
+.about-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    color: #ffcc00; /* Change text color on hover */
+}
+
+/* Active/Current Page Link Style */
+nav ul li a.active {
+    background-color: #ffcc00; /* Different color for active link */
+    color: #333; /* Darker text color for the active link */
+}
+
+/* Header Styling */
+.sticky-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00ff1a;
+    padding: 15px 20px; /* Adjust padding for mobile */
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px; /* Responsive logo size */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+}
+
+nav ul li {
+    margin: 0; /* Removed margin */
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Background color on hover */
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #ff5722;
+    color:rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 300px 20px; /* Adjusted padding for better spacing */
+    position: relative;
+    height: 90vh; /* Adjusted height for a more compact look */
+    overflow: hidden; /* Hide overflow to maintain a clean layout */
+    z-index: 1; /* Ensure it's below the hamburger */
+}
+.hero {
+    position: relative;
+    overflow: hidden; /* Prevent overflow from images */
+    
+}
+
+.hero-slider {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transition for sliding effect */
+}
+
+.slide {
+    min-width: 100%; /* Full width for each slide */
+    transition: opacity 1s ease; /* Transition for fading effect */
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    animation: zoom 10s infinite; /* Animation to zoom in and out */
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.05); /* Zoom in */
+    }
+}
+
+/* Hero Image */
+.hero-image {
+    width: 100%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Add zoom effect on hover */
+.hero-image:hover {
+    transform: scale(1.05); /* Slight zoom in on hover */
+}
+
+/* Hero Section Text Styling */
+.hero h1 {
+    color: #ff0000; /* Change the color for the heading */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #ff0000; /* Change the color for the paragraph */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* CTA Button */
+.hero .cta-button {
+    background-color: #007bff;
+    color: #ffffff; /* Change the text color of the button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.hero .cta-button:hover {
+    background-color: #0056b3; /* Background color when hovered */
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    .hero {
+        padding: 30px 10px; /* Further reduce padding for mobile */
+        height: 40vh; /* Further reduce height on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+    position: absolute; /* Positioning for overlap */
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out; /* Fade transition */
+}
+
+.fade {
+    opacity: 1; /* Show the current slide */
+}
+
+.hero-image {
+    width: 100%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease-in-out; /* Smooth zoom effect */
+}
+
+/* Add zoom effect */
+.hero-image:hover {
+    transform: scale(1.1); /* Zoom in on hover */
+}
+
+/* Services Section */
+.services {
+    background-color: #fff;
+    padding: 30px 10px; /* Adjust padding for mobile */
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem; /* Responsive heading */
+    margin-bottom: 20px;
+}
+
+/* Service Cards Grid Layout */
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Automatically adjusts columns */
+    gap: 16px; /* Space between grid items */
+    padding: 16px; /* Padding around the container */
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #9b9b9b; /* Background color for each card */
+    border-radius: 8px; /* Rounded corners for each card */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Ensure content stays within rounded borders */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Card Image Styling */
+.card-img {
+    width: 100%; /* Full-width images */
+    height: auto;
+    border-radius: 8px 8px 0 0; /* Rounded top corners for images */
+    margin-bottom: 12px; /* Spacing below the image */
+}
+
+/* Card Text Styling */
+.card h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Optional Hover effect for cards */
+.card:hover {
+    transform: translateY(-10px); /* Slightly lift the card on hover */
+}
+/* Card Styling */
+.card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Control card width */
+    text-align: center;
+}
+
+.card-img {
+    width: 100%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #e9ecef;
+    padding: 30px 10px; /* Adjust padding for mobile */
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 10px; /* Adjust padding for mobile */
+    text-align: center;
+}
+footer {
+    background-color: #333; /* Footer background color */
+    color: white; /* Text color */
+    padding: 20px 10px; /* Padding for the footer */
+    text-align: center; /* Center align the text */
+}
+
+.footer-content {
+    max-width: 1200px; /* Max width for the content */
+    margin: 0 auto; /* Center the content */
+}
+
+.social-links {
+    margin-top: 10px; /* Space above the social links */
+}
+
+.social-links a {
+    color: white; /* Icon color */
+    margin: 0 15px; /* Space between icons */
+    font-size: 24px; /* Size of the icons */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+.social-links a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .sticky-header {
+        flex-direction: column;
+        padding: 10px 15px; /* Adjust padding for mobile */
+    }
+
+    .cta-button {
+        margin-top: 10px; /* Space above the button */
+    }
+
+    .hero {
+        padding: 100px 10px; /* Adjust padding for mobile */
+    }
+
+    .services, .testimonials {
+        padding: 40px 10px; /* More padding for sections */
+    }
+}
+
+.hidden {
+    display: none; /* Hide the content by default */
+}
+
+/* About Us Button */
+.about-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* About Us Card */
+.about-card {
+    position: fixed; /* Fixed positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears above other content */
+    max-width: 90%; /* Responsive width */
+    display: none; /* Hidden by default */
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+.contact-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px; /* Add space between the buttons */
+}
+
+.contact-button, .whatsapp-button {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.contact-button {
+    background-color: green;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+}
+
+/* Close Button */
+.close-button {
+    background-color: #dc3545; /* Close button color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.close-button:hover {
+    background-color: #c82333; /* Slightly darker shade */
+}
+
+.contact-button:focus, .whatsapp-button:focus, .close-button:focus {
+    outline: 2px solid #ffcc00; /* Outline for better accessibility */
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-modal {
+    float: right
+;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.card {
+    background-color: #cccccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-img {
+    width: 80px; /* Adjust the width of the image */
+    height: auto; /* Keeps the aspect ratio intact */
+    margin-top: 20px; /* Space between content and image */
+    align-self: center; /* Centers the image horizontally */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555555;
+}
+
+.hamburger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background-color: rgb(0, 0, 0);
+    margin: 4px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        background-color: #000000; /* Match header background */
+        position: absolute; /* Position it absolutely */
+        top: 100%; /* Below the header */
+        left: 0; /* Align to the left */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger */
+    }
+
+    nav.active ul {
+        display: flex; /* Show nav links when active */
+    }
+}
